@@ -2,3 +2,6 @@
 console.log("Documento cargado correctamente.");
 // 2. Ejercicio 2
 console.log("Título del documento:", document.title);
+// 3. Ejercicio 3
+const primerH2 = document.querySelector("h2");
+console.log("Texto del primer h2:", primerH2.textContent);
