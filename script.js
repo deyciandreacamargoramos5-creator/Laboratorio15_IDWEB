@@ -78,3 +78,16 @@ if (parrafoViejo) {
 } else {
     console.log("No se encontró el párrafo a reemplazar.");
 }
+//11. Ejercicio 13
+const listaPadre = document.getElementById("lista-ejercicio-13");
+if (listaPadre) {
+    const ultimoLi = listaPadre.lastElementChild; 
+    if (ultimoLi) {
+        listaPadre.removeChild(ultimoLi);
+        console.log(`El último elemento <li> ("${ultimoLi.textContent}") ha sido eliminado.`);
+    } else {
+        console.log("No se encontró un último elemento <li> para eliminar");
+    }
+} else {
+    console.log("No se encontró la lista con el ID lista-ejercicio-13");
+}
