@@ -113,3 +113,19 @@ if (h2Original) {
 } else {
     console.log("No se encontró ningún elemento <h2> para clonar.");
 }
+//14. Ejercicio 16
+const lista2Padre = document.getElementById("lista-movimiento");
+
+if (lista2Padre) {
+    const ultimoLi = lista2Padre.lastElementChild; 
+    const primerLi = lista2Padre.firstElementChild;
+    
+    if (ultimoLi && primerLi) {
+        lista2Padre.insertBefore(ultimoLi, primerLi);
+        console.log("El último <li> ha sido movido al inicio de la lista.");
+    } else {
+        console.log("No se encontraron suficientes elementos <li> en la lista para realizar el movimiento.");
+    }
+} else {
+    console.log("No se encontró la lista con el ID lista-movimiento");
+}
