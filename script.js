@@ -4,7 +4,7 @@ console.log ("Texto del primer h2:", primerH2.textContent);
 //2. Ejercicio 4
 const todosLosParrafos = document.querySelectorAll("p");
 todosLosParrafos.forEach(parrafo => {
-    parrafo.innerHTML = "Texto actualizado dinámicamente texto en la consola";
+    parrafo.innerHTML = "Texto actualizado dinámicamente ";
 });
 //3. Ejercicio 5
 const primeraImagen = document.querySelector("img");
@@ -43,10 +43,10 @@ document.body.appendChild(nuevoParrafo);
 console.log("Se ha insertado un nuevo elemento <p> al final del body.");
 //8. Ejercicio 10
 const nuevoH3 = document.createElement("h3");
-nuevoH3.textContent = "Nuevo Encabezado insertado (H3)";
-const segundoH2 = document.querySelector("h2");
-if (segundoH2) {
-    document.body.insertBefore(nuevoH3, segundoH2);
+nuevoH3.textContent = "Nuevo Encabezado insertado";
+const referenciaH2 = document.querySelector("h2"); 
+if (referenciaH2) {
+    referenciaH2.parentNode.insertBefore(nuevoH3, referenciaH2);
     console.log("Se ha insertado un nuevo <h3> antes del primer <h2>.");
 } else {
     console.log("No se encontró ningún elemento <h2> para usar como referencia.");
@@ -64,4 +64,17 @@ if (contenedorDiv) {
     console.log("Se ha creado y agregado la lista <ul> con 5 elementos al <div>.");
 } else {
     console.log("No se encontró el elemento con el ID contenedor-lista");
+}
+//10. Ejercicio 12
+const parrafoViejo = document.getElementById("parrafo-a-reemplazar");
+const nuevoDiv = document.createElement("div");
+nuevoDiv.textContent = "Párrafo reemplazado ";
+nuevoDiv.style.backgroundColor = "yellow";
+nuevoDiv.style.padding = "10px";
+if (parrafoViejo) {
+    const elementoPadre = parrafoViejo.parentNode; 
+    elementoPadre.replaceChild(nuevoDiv, parrafoViejo);
+    console.log("El párrafo ha sido reemplazado por el nuevo <div>.");
+} else {
+    console.log("No se encontró el párrafo a reemplazar.");
 }
