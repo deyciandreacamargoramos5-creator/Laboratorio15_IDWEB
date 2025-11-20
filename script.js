@@ -41,3 +41,13 @@ nuevoParrafo.style.color = "purple";
 nuevoParrafo.style.fontWeight = "bold";
 document.body.appendChild(nuevoParrafo);
 console.log("Se ha insertado un nuevo elemento <p> al final del body.");
+//8. Ejercicio 10
+const nuevoH3 = document.createElement("h3");
+nuevoH3.textContent = "Nuevo Encabezado insertado (H3)";
+const segundoH2 = document.querySelector("h2");
+if (segundoH2) {
+    document.body.insertBefore(nuevoH3, segundoH2);
+    console.log("Se ha insertado un nuevo <h3> antes del primer <h2>.");
+} else {
+    console.log("No se encontró ningún elemento <h2> para usar como referencia.");
+}
