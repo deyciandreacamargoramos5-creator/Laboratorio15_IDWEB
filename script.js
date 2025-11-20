@@ -129,3 +129,19 @@ if (lista2Padre) {
 } else {
     console.log("No se encontró la lista con el ID lista-movimiento");
 }
+//15. Ejercicio 17
+const lista3Padre = document.getElementById("lista-ordenar");
+if (lista3Padre) {
+    const itemsArray = Array.from(lista3Padre.children);
+    itemsArray.sort((a, b) => {
+        const textoA = a.textContent.toLowerCase();
+        const textoB = b.textContent.toLowerCase();
+        return textoA.localeCompare(textoB);
+    });
+    itemsArray.forEach(item => {
+        lista3Padre.appendChild(item);
+    });
+    console.log("Los elementos de la lista han sido ordenados alfabeticamente.");
+} else {
+    console.log("No se encontró la lista con el ID lista-ordenar");
+}
