@@ -152,3 +152,11 @@ todasLasSecciones.forEach((seccion, index) => {
     console.log(`Atributo 'data-index=${index}' agregado a la sección: ${seccion.querySelector('h2').textContent}`);
 });
 console.log("Proceso completado");
+//17. Ejercicio 19
+const contadorLi = document.querySelectorAll("li").length;
+const divResultado = document.createElement("div");
+divResultado.textContent = `Resultado: Hay ${contadorLi} nodos <li> en el documento.`;
+divResultado.style.marginTop = "20px";
+divResultado.style.padding = "10px";
+divResultado.style.backgroundColor = "rgba(131, 131, 57, 1)";
+document.body.appendChild(divResultado);
