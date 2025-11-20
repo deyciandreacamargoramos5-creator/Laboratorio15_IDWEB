@@ -91,3 +91,14 @@ if (listaPadre) {
 } else {
     console.log("No se encontró la lista con el ID lista-ejercicio-13");
 }
+//12. Ejercicio 14
+const contenedor = document.getElementById("contenido");
+if (contenedor) {
+    contenedor.innerHTML = "";
+    
+    console.log("Contenedor contenido vaciado.");
+    contenedor.textContent = "Contenido vaciado automaticamente"; 
+    contenedor.style.backgroundColor = "lightgreen";
+} else {
+    console.error("No se encontró el elemento con el ID contenido");
+}
