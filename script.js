@@ -145,3 +145,10 @@ if (lista3Padre) {
 } else {
     console.log("No se encontró la lista con el ID lista-ordenar");
 }
+//16. Ejercicio 18
+const todasLasSecciones = document.querySelectorAll("section")
+todasLasSecciones.forEach((seccion, index) => {
+    seccion.setAttribute("data-index", index);
+    console.log(`Atributo 'data-index=${index}' agregado a la sección: ${seccion.querySelector('h2').textContent}`);
+});
+console.log("Proceso completado");
