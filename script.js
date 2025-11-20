@@ -102,3 +102,14 @@ if (contenedor) {
 } else {
     console.error("No se encontró el elemento con el ID contenido");
 }
+//13. Ejercicio 15
+const h2Original = document.querySelector("h2");
+if (h2Original) {
+    const h2Clonado = h2Original.cloneNode(true); 
+    h2Clonado.textContent = h2Clonado.textContent + " - CLONADO";
+    h2Clonado.style.color = "green";
+    document.body.appendChild(h2Clonado);
+    console.log("Se ha clonado el primer <h2> y se ha agregado al final del body")
+} else {
+    console.log("No se encontró ningún elemento <h2> para clonar.");
+}
