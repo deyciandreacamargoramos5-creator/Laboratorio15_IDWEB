@@ -28,3 +28,9 @@ if(miLista){
 }else{
     console.log("No se encontro el elemento con el ID miLista")
 }
+//6. Ejercicio 8
+const colores = ["red", "blue", "green", "orange", "purple", "yellow"];
+const divs = document.querySelectorAll('div');
+divs.forEach((div, index) => {
+    div.style.backgroundColor = colores[index % colores.length];
+});
