@@ -12,3 +12,9 @@ primeraImagen.src = "imagenes/img1.jpg";
 primeraImagen.alt = "Imagen";
 console.log("El nuevo src de la imagen es: ", primeraImagen.src);
 console.log("El nuevo alt de la imagen es: ", primeraImagen.alt);
+//4. Ejercicio 6
+const elementosLi = document.querySelectorAll("li");
+elementosLi.forEach(li => {
+    li.classList.add("resaltado"); 
+    li.classList.remove("oculto"); 
+});
