@@ -18,3 +18,13 @@ elementosLi.forEach(li => {
     li.classList.add("resaltado"); 
     li.classList.remove("oculto"); 
 });
+//5. Ejercicio 7
+const miLista = document.getElementById("miLista");
+if(miLista){
+    const elementosLi = miLista.children;
+    for(const li of elementosLi){
+        console.log(li.textContent);
+    }
+}else{
+    console.log("No se encontro el elemento con el ID miLista")
+}
