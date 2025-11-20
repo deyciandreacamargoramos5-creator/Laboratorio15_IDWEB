@@ -202,3 +202,30 @@ if (contenedor1) {
 } else {
     console.error("No se encontró el contenedor con el ID 'contenedor'.");
 }
+//19. Ejercicio 22
+const seccionPadre = document.getElementById("seccion-a-reconstruir");
+if (seccionPadre) {
+    const nuevoH2 = document.createElement("h2");
+    nuevoH2.textContent = "Título nuevo";
+    seccionPadre.appendChild(nuevoH2);
+    const nuevoP = document.createElement("p");
+    nuevoP.textContent = "Descripción generada";
+    seccionPadre.appendChild(nuevoP);
+    const nuevaLista = document.createElement("ul");
+    for (let i = 1; i <= 3; i++) {
+        const nuevoLi = document.createElement("li");
+        nuevoLi.textContent = `Ítem de lista ${i}`;
+        nuevaLista.appendChild(nuevoLi);
+    }
+    seccionPadre.appendChild(nuevaLista);
+    const parrafoOriginal = document.getElementById("parrafo-a-eliminar");
+    if (parrafoOriginal) {
+        parrafoOriginal.parentNode.removeChild(parrafoOriginal);
+        console.log("El párrafo original (ID 'parrafo-a-eliminar') ha sido eliminado");
+    } else {
+        console.log("No se encontró el párrafo original con el ID 'parrafo-a-eliminar'.");
+    }
+    console.log("Estructura de la sección reconstruida");
+} else {
+    console.error("No se encontró la sección con el ID 'seccion-a-reconstruir'.");
+}
