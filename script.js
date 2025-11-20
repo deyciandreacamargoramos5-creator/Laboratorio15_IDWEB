@@ -51,3 +51,17 @@ if (segundoH2) {
 } else {
     console.log("No se encontró ningún elemento <h2> para usar como referencia.");
 }
+//9. Ejercicio 11
+const nuevaLista = document.createElement("ul");
+for (let i = 1; i <= 5; i++) {
+    const nuevoLi = document.createElement("li");
+    nuevoLi.textContent = `Elemento ${i}`; 
+    nuevaLista.appendChild(nuevoLi);
+}
+const contenedorDiv = document.getElementById("contenedor-lista");
+if (contenedorDiv) {
+    contenedorDiv.appendChild(nuevaLista); 
+    console.log("Se ha creado y agregado la lista <ul> con 5 elementos al <div>.");
+} else {
+    console.log("No se encontró el elemento con el ID contenedor-lista");
+}
