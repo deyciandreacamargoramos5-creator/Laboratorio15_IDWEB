@@ -160,6 +160,7 @@ divResultado.style.marginTop = "20px";
 divResultado.style.padding = "10px";
 divResultado.style.backgroundColor = "rgba(131, 131, 57, 1)";
 document.body.appendChild(divResultado);
+//18. Ejercicio 20
 const numDivsHijos = 3; 
 const divPrincipal = document.createElement("div");
 divPrincipal.id = "contenedor-principal";
@@ -175,4 +176,29 @@ for (let i = 1; i <= numDivsHijos; i++) {
     divPrincipal.appendChild(divHijo);
 document.body.appendChild(divPrincipal);
 console.log(`Se creó y agregó una estructura anidada de ${numDivsHijos} niveles`);
+}
+//18. Ejercicio 21
+const contenedor1 = document.getElementById("contenedor1");
+if (contenedor1) {
+    const p1 = document.createElement("p");
+    p1.textContent = "Párrafo 1 (Será el primero)";
+    contenedor1.appendChild(p1);
+    const p2 = document.createElement("p");
+    p2.textContent = "Párrafo 2 (Será eliminado)";
+    p2.style.fontWeight = "bold";
+    contenedor1.appendChild(p2);
+    const p3 = document.createElement("p");
+    p3.textContent = "Párrafo 3 (Será el último)";
+    contenedor1.appendChild(p3);
+    console.log("Se han creado 3 párrafos dentro del contenedor.");
+    const hijosDelContenedor1 = contenedor1.children;
+    if (hijosDelContenedor1.length >= 2) {
+        const parrafoAeliminar = hijosDelContenedor1[1];
+        contenedor1.removeChild(parrafoAeliminar);
+        console.log(`El segundo párrafo ("${parrafoAeliminar.textContent}") ha sido eliminado.`);
+    } else {
+        console.warn("No hay suficientes párrafos para eliminar el segundo.");
+    }
+} else {
+    console.error("No se encontró el contenedor con el ID 'contenedor'.");
 }
