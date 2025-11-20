@@ -34,3 +34,10 @@ const divs = document.querySelectorAll('div');
 divs.forEach((div, index) => {
     div.style.backgroundColor = colores[index % colores.length];
 });
+//7. Ejercicio 9
+const nuevoParrafo = document.createElement("p");
+nuevoParrafo.textContent = "Elemento insertado con JS";
+nuevoParrafo.style.color = "purple";
+nuevoParrafo.style.fontWeight = "bold";
+document.body.appendChild(nuevoParrafo);
+console.log("Se ha insertado un nuevo elemento <p> al final del body.");
