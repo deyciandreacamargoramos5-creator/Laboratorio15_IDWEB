@@ -160,3 +160,19 @@ divResultado.style.marginTop = "20px";
 divResultado.style.padding = "10px";
 divResultado.style.backgroundColor = "rgba(131, 131, 57, 1)";
 document.body.appendChild(divResultado);
+const numDivsHijos = 3; 
+const divPrincipal = document.createElement("div");
+divPrincipal.id = "contenedor-principal";
+divPrincipal.textContent = "Contenedor Principal (Ej. 20)"
+for (let i = 1; i <= numDivsHijos; i++) {
+    const divHijo = document.createElement("div");
+    divHijo.classList.add("div-hijo");
+    divHijo.textContent = `Div Hijo ${i}: `; 
+    const spanInterno = document.createElement("span");
+    spanInterno.classList.add("span-interno");
+    spanInterno.textContent = "Nivel interno";
+    divHijo.appendChild(spanInterno);
+    divPrincipal.appendChild(divHijo);
+document.body.appendChild(divPrincipal);
+console.log(`Se creó y agregó una estructura anidada de ${numDivsHijos} niveles`);
+}
